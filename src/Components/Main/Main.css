@@ -1,0 +1,16 @@
+.error__container {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (width > 1300px) {
+  .main__container {
+    margin: 3rem auto;
+    max-width: 1200px;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+  }
+}

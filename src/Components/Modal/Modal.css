@@ -1,0 +1,148 @@
+.modal__container {
+  width: 500px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.modal__img {
+  width: 100%;
+  border-radius: 1rem;
+  margin: 0 auto;
+  object-fit: cover;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.modal__img:hover {
+  opacity: 0.5;
+}
+
+.modal__thumbnails__container__carousel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.modal__thumbnails__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.modal__thumbnail input {
+  display: none;
+}
+
+.modal__thumbnail {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  background-color: var(--white);
+}
+
+.modal__thumbnail:hover .modal__thumbnail__img {
+  opacity: 0.5;
+}
+
+.modal__thumbnail--active {
+  outline-style: solid;
+  outline-color: var(--primary-color);
+  outline-width: medium;
+  border-radius: 1rem;
+}
+
+.modal__thumbnail__img {
+  border-radius: 1rem;
+  width: 100px;
+  transition: var(--transition);
+  border-color: var(--primary-color);
+  border: none;
+}
+
+.modal__thumbnail--active .modal__thumbnail__img {
+  opacity: 0.5;
+}
+
+/* Modal */
+
+.close__modal {
+  background-color: transparent;
+  border: none;
+  align-self: end;
+  cursor: pointer;
+  position: absolute;
+  top: -2rem;
+  z-index: 10000;
+}
+
+.close__modal__icon {
+  filter: invert(94%) sepia(94%) saturate(0%) hue-rotate(260deg)
+    brightness(106%) contrast(108%);
+  width: 20px;
+}
+
+.modal__overlay--hidden {
+  display: none;
+}
+
+.modal__overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 1000000;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.modal__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 500px;
+}
+
+.modal__img__carousel {
+  width: 100%;
+  border-radius: 1rem;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.modal__content > div {
+  position: relative;
+}
+
+.btn-prev-modal {
+  left: -20px;
+}
+
+.btn-next-modal {
+  right: -20px;
+}
+
+@media (width < 650px) {
+  .modal__container {
+    display: none;
+  }
+  .modal__overlay {
+    display: none;
+  }
+}
+
+@media (width > 1300px) {
+  .modal__container {
+    margin: 0;
+  }
+}

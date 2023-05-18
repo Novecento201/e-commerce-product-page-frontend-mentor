@@ -1,0 +1,122 @@
+.cart__items__number {
+  display: block;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  color: white;
+  background-color: var(--primary-color);
+  width: 100%;
+  border-radius: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  z-index: 100;
+}
+
+.cart__container {
+  display: flex;
+  position: relative;
+}
+
+.cart__icon {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.cart__content {
+  position: fixed;
+  top: 5.5rem;
+  left: auto;
+  right: 1rem;
+  background-color: var(--white);
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
+  z-index: 1000;
+  max-width: calc(100% - 2rem);
+  display: none;
+}
+
+.cart__content.active__cart {
+  display: block;
+}
+
+.cart__content h4 {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cart__items {
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.prod__card__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  gap: 1rem;
+}
+
+.prod__card__container img {
+  width: 50px;
+  border-radius: 5px;
+}
+
+.prod__cart__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2rem;
+  font-size: calc(var(--font-size) * 0.8);
+}
+
+.total__price__cart {
+  font-weight: bold;
+  margin-left: 0.3rem;
+}
+
+.delete__button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.delete__button img {
+  width: 15px;
+}
+
+.checkout__button {
+  width: 100%;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.checkout__button:hover {
+  opacity: 0.5;
+}
+
+@media (width > 1300px) {
+  .cart__content {
+    position: absolute;
+    top: 60px;
+    right: -100px;
+    width: 350px;
+    max-width: none;
+  }
+}
